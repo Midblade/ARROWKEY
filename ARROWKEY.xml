@@ -1,1 +1,48 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="controls_if" id="32" inline="false" x="45" y="39">
+    <value name="IF0">
+      <block type="sensor_button" id="15">
+        <field name="OBJECT">UP</field>
+      </block>
+    </value>
+    <statement name="DO0">
+      <block type="movement_forward" id="42"></block>
+    </statement>
+    <next>
+      <block type="controls_if" id="64" inline="false">
+        <value name="IF0">
+          <block type="sensor_button" id="104">
+            <field name="OBJECT">DOWN</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="movement_reverse" id="115"></block>
+        </statement>
+        <next>
+          <block type="controls_if" id="144" inline="false">
+            <value name="IF0">
+              <block type="sensor_button" id="166">
+                <field name="OBJECT">RIGHT</field>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="movement_right" id="176"></block>
+            </statement>
+            <next>
+              <block type="controls_if" id="214" inline="false">
+                <value name="IF0">
+                  <block type="sensor_button" id="236">
+                    <field name="OBJECT">LEFT</field>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="movement_left" id="247"></block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
